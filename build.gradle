@@ -14,7 +14,7 @@ repositories {
 
 
 dependencies {
-	//compile group: 'org.json', name: 'json', version: '20170516'
+	compile group: 'org.json', name: 'json', version: '20190722'
 	//compile group: 'org.apache.commons', name: 'commons-csv', version: '1.5'
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	//compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
@@ -26,22 +26,25 @@ dependencies {
 	// https://mvnrepository.com/artifact/javax.mail/javax.mail-api
 	//compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
 	//compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'
-	// https://mvnrepository.com/artifact/com.google.code.gson/gson
-	//compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
-	// https://mvnrepository.com/artifact/com.kaltura/kalturaApiClient
 	//compile group: 'commons-io', name: 'commons-io', version: '2.6'
+	// https://mvnrepository.com/artifact/commons-codec/commons-codec
+	compile group: 'commons-codec', name: 'commons-codec', version: '1.13'
 	// https://mvnrepository.com/artifact/com.google.guava/guava
 	//compile group: 'com.google.guava', name: 'guava', version: '19.0'
 	// https://mvnrepository.com/artifact/org.postgresql/postgresql
 	//compile group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
 
 	// Use JUnit test framework
-	testImplementation 'junit:junit:4.12'
+	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0'
+	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.0'
+
 }
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'org.ofm.utils.Driver'
+		attributes 'Main-Class': 'org.ofm.cli.Driver'
 	}
 
 	from {

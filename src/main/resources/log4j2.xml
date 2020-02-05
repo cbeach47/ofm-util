@@ -7,11 +7,15 @@
 		</Console>
 		<File name="LogFile" fileName="openequella-toolbox.log">
 			<PatternLayout>
-				<Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+				<Pattern>%d{yyyy/mm/dd HH:mm:ss.SSS} [%t] %-5level %logger{36} -
+					%msg%n</Pattern>
 			</PatternLayout>
 		</File>
 	</Appenders>
 	<Loggers>
+		<logger name="org.ofm.utils.OfmFileUtils" level="TRACE" additivity="false">
+			<AppenderRef ref="Console" />
+		</logger>
 		<Root level="INFO">
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="LogFile" />

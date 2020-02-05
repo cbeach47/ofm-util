@@ -1,0 +1,14 @@
+{"files": [
+  {
+    "file": "/home/cbeach/repo/github/cbeach47/ofm-util/src/test/resources/testDirectory1/flowers.jpg",
+    "checksum": "3a3508da1793aaaf81b5773a34d0921bb6c4a35a91d596eb2afd88c43e33c606"
+  },
+  {
+    "file": "/home/cbeach/repo/github/cbeach47/ofm-util/src/test/resources/testDirectory1/random.txt",
+    "checksum": "4f2dcc69dc13e4a86d6efd2e4bc8d845a1c7da9f10dd49949d4178737af833fe"
+  },
+  {
+    "file": "/home/cbeach/repo/github/cbeach47/ofm-util/src/test/resources/testDirectory1/random_duplicate.txt",
+    "checksum": "4f2dcc69dc13e4a86d6efd2e4bc8d845a1c7da9f10dd49949d4178737af833fe"
+  }
+]}
