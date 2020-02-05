@@ -1,0 +1,26 @@
+language: java
+jdk:
+  - openjdk8
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+install: true
+
+script:
+  - ./gradlew build
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+deploy:
+  provider: releases
+  api_key:
+    secure: BUZnYa/qt2U3C37eRPq7oGtk7Fh17hKE5x+JQluil15nUfT9s80D4PmAKem4JqKVnf1KBrGj985c1Cufwj+onicJtPCHf8rM5VvOvfWhk7lP/DSPxIc058keERMldjvqgWhwqu18StVDIO6qgq7IxVTDsG82l8HVZOH0MVGfEAikN5dbLYi76dQkzhggsI6aUpzrwWOG6O5vUBKflPr9ktSDfaqWvV//RqWTxIXkmbwm0SMuWhB4AnXiiYv9OKWoFvuIgIaRvBm6+DwSnBhKj5sRPclRZIrL6j/9CCRBt9gWeMbUMgIEJxpkZeKmxIgMOrfFpn7U5EjlOR/l+9d8tOmgOaXrttPVQ8yt+erknoAKNlUgNmwprSOk/8Iwvgoi4YkLi//TaG/CWOg/1RDBjogVMMkOM4EBCa3YRww9gidsD8sI8WXmodYB5neVtjTGqeOXGTEylrlygA6AcTcI6CG1xCrO070hB6vqlLUoN4mJBjMojFmfDcnZXAsTxTcF7Z7JPHGHVxFdc2UQYVGkhiugcddUIEoKILNofsMdiFg3G7jB8CUFPo46UmHS1s0qSADMeqCGPrRpe4FF5OmwVc9+8rCyojtzED7E7mohzBu2UKfSWQmk5XsWzKmGOj3VaUfU3X5sFJ6hvzCHfVp1KoHmmxw+mzVvMuEvNhFling=
+  file: build/libs/*
+  on:
+    repo: cbeach47/ofm-util
+    tags: true
